@@ -7,15 +7,15 @@
 <br>
 
 # アプリケーションの概要
-
+フリマアプリです。
 ユーザーを登録すると商品を出品できるようになります。自身が出品した商品は、編集と削除をすることができます。他のユーザーが出品した商品は、クレジットカードを用いて購入することができます。
 <br>
 <br>
 
 # URL 
 
-#### Herokuによるデプロイ
-https://furima-38093.herokuapp.com/
+#### render.comによるデプロイ
+https://furima-bhj7.onrender.com
 
 #### Basic認証
 - ID: ookwk4bi
@@ -25,18 +25,34 @@ https://furima-38093.herokuapp.com/
 
 # テスト用アカウント
 #### 購入者用
-- メールアドレス: ahkachu@apa.co.jp
-- パスワード: ookwk6bi
+- メールアドレス: order@gmail.com
+- パスワード: order0000
 
 #### 購入用カード情報(PAYJPテスト用)
 - 番号：4242424242424242
-- 期限：Thu Feb 01 2024 00:00:00 GMT+0900 (JST)
+- 期限:未来の年月で指定
 - セキュリティコード：123
 
 #### 出品者用
-- メールアドレス名: ahkaeki@apa.co.jp
-- パスワード: ookwk5bi
+- メールアドレス名: test@gmail.com
+- パスワード: test0000
 <br>
+<br>
+
+# 動作確認方法
+
+Chromeの最新版を利用してアクセスしてください。ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続ください。
+
+接続先およびログイン情報については、上記の通りです。なお、同時に複数の方がログインしている場合に、ログインできない可能性がございます。
+
+●出品方法は以下の手順で確認できます<br>
+テストアカウントでログイン→トップページから出品ボタン押下→商品情報入力→商品出品
+
+●購入方法は以下の手順で確認できます<br>
+テストアカウントでログイン→トップページ下部から商品選択→商品購入
+
+●確認後、ログアウト処理をお願いします。
+
 <br>
 
 # 実装機能
@@ -79,6 +95,10 @@ https://furima-38093.herokuapp.com/
 
 
 <br>
+
+## 6.検索機能
+出品商品名で検索できます。
+[![Image from Gyazo](https://i.gyazo.com/53db7017d34a54f54e09257b7214a7e8.gif)](https://gyazo.com/53db7017d34a54f54e09257b7214a7e8)
 <br>
 
 # ER 図
@@ -175,7 +195,7 @@ https://furima-38093.herokuapp.com/
 
 ```
 % git clone https://github.com/ookwk4bi/furima-38093.git
-% cd furima-29074
+% cd furima-38093
 % bundle install
 % rails db:create
 % rails db:migrate
